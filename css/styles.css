@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
 
 :root {
   /* Primary */
@@ -21,196 +21,230 @@
   --dark-gray-blue: hsl(224, 30%, 27%);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Hanken Grotesk', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
-body{
+/************ 1440PX *************/
 
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--pale-blue);
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pale-blue);
 }
 
-.card{
-    box-shadow: rgba(0, 0, 0, .24) 0px 3px  8px;
-    border-radius: 2rem;
-    width: 645px;
-    background-color: var(--white);
+/* Creating the container the hold the results and scores */
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 2rem;
+  width: 645px;
+  background-color: var(--white);
 }
 
 .card-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.results{
-    width: 50%;
-    padding: 1.5rem 2rem;
-    border-radius: 2rem;
-    background: linear-gradient(to bottom, var(--light-slate-blue-background), var(--light-royal-blue-background));
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+/* END */
+
+/* RESULT CARD BEGIN */
+
+.results {
+  width: 50%;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  background: linear-gradient(
+    to bottom,
+    var(--light-slate-blue-background),
+    var(--light-royal-blue-background)
+  );
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-.results .title{
-    color: var(--light-lavender);
-    margin-bottom: 1rem;
+.results .title {
+  color: var(--light-lavender);
+  margin-bottom: 1rem;
 }
 
-.results .circle{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: linear-gradient(to bottom, var(--violet-blue-circle), var(--persian-blue-circle));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.results .circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    var(--violet-blue-circle),
+    var(--persian-blue-circle)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.circle h2{
-    font-size: 4rem;
-    color: var(--white);
+.circle h2 {
+  font-size: 4rem;
+  color: var(--white);
 }
 
-.circle p{
-    color: var(--light-lavender);
+.circle p {
+  color: var(--light-lavender);
 }
 
-.results b{
-    color: var(--white);
-    font-size: 1.5rem;
-    margin-top: 1rem;
+.results strong {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
-.results .info{
-    color: var(--light-lavender);
-    width: 200px;
+.results .info {
+  color: var(--light-lavender);
+  width: 200px;
 }
 
-.summary{
-    width: 50%;
-    padding: 1.5rem 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+/* RESULT CARD END */
+
+
+/* SCORES CARD BEGIN */
+
+.summary {
+  width: 50%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .summary .title {
-    color: black;
-    font-weight: 800;
+  color: black;
+  font-weight: 800;
 }
 
-.rows{
-    display: flex;
-    flex-direction: column;
-    gap: .8rem;
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
-.row{
-    display: flex;
-    border-radius: 10px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem .5rem;
+.score-row {
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
 }
 
-.row:nth-child(1){
-    background-color: hsla(0, 100%, 67%, .2);
+.score-row:nth-child(1) {
+  background-color: hsla(0, 100%, 67%, 0.2);
 }
 
-.row:nth-child(1) .scores b{
-    color: var(--light-red);
+.score-row:nth-child(2) {
+  background-color: hsla(39, 100%, 56%, 0.2);
 }
 
-.row:nth-child(2){
-    background-color: hsla(39, 100%, 56%, .2);
+.score-row:nth-child(3) {
+  background-color: hsla(166, 100%, 37%, 0.2);
 }
 
-.row:nth-child(2) .scores b{
-    color: var(--orange-yellow);
+.score-row:nth-child(4) {
+  background-color: hsla(234, 85%, 45%, 0.2);
 }
 
-.row:nth-child(3){
-    background-color: hsla(166, 100%, 37%, .2);
+
+.score-row:nth-child(1) .scores strong {
+  color: var(--light-red);
 }
 
-.row:nth-child(3) .scores b{
-    color: var(--green-teal);
+.score-row:nth-child(2) .scores strong {
+  color: var(--orange-yellow);
 }
 
-.row:nth-child(4){
-    background-color: hsla(234, 85%, 45%, .2);
+.score-row:nth-child(3) .scores strong {
+  color: var(--green-teal);
 }
 
-.row:nth-child(4) .scores b{
-    color: var(--cobalt-blue);
+.score-row:nth-child(4) .scores strong {
+  color: var(--cobalt-blue);
 }
 
-.scores{
-    display: flex;
-    align-items: center;
-    gap: .5rem;
+.scores {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.row p{
-    color: gray;
+.score-row p {
+  color: gray;
 }
 
-.row p b{
-    color: var(--dark-gray-blue);
+.score-row p strong {
+  color: var(--dark-gray-blue);
 }
 
 .btn {
-    margin-top: auto;
-    border: none;
-    border-radius: 2rem;
-    padding: 1rem;
-    background-color: var(--dark-gray-blue);
-    cursor: pointer;
-    font-size: 1rem;
-    color: white;
+  margin-top: auto;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+  background-color: var(--dark-gray-blue);
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
 }
 
-.btn:hover{
-    background: linear-gradient(to bottom, var(--light-slate-blue-background), var(--light-royal-blue-background));
+.btn:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--light-slate-blue-background),
+    var(--light-royal-blue-background)
+  );
 }
 
-@media screen and (max-width:650px) {
-    body{
-        align-items: flex-start;
-        background-color: white;
-    }
+/* SCORES CARD END */
 
-    .card{
-        box-shadow: none;
-    }
+@media screen and (max-width: 650px) {
+  body {
+    align-items: flex-start;
+    background-color: white;
+    padding:  0 .5rem;
+  }
 
-    .card-container{
-        flex-direction: column;
-    }
+  .card {
+    box-shadow: none;
+  }
 
-    .results{
-        border-radius: 0 0 1rem 1rem;
-        width: 100%;
-    }
+  .card-container {
+    flex-direction: column;
+  }
 
-    .results .info{
-        width: 250px;
-    }
+  .results {
+    border-radius: 0 0 1rem 1rem;
+    width: 100%;
+  }
 
-    .summary{
-        width: 100%;
-    }
+  .results .info {
+    width: 250px;
+  }
 
+  .summary {
+    width: 100%;
+  }
 }
-    
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
